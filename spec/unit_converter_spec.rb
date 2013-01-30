@@ -32,4 +32,20 @@ describe UnitConverter do
       pounds.should eq 26.455
     end
   end
+
+  context "feet to meters" do
+    it "without explicit precision, defaults to 2 decimals" do
+      feet = UnitConverter.feet_to_meters(10)
+      feet.should eq 3.05
+      feet = UnitConverter.feet_to_meters(12)
+      feet.should eq 3.66
+    end
+
+    it "converts with explicit precision" do
+      feet = UnitConverter.feet_to_meters(10, 1)
+      feet.should eq 3.1
+      feet = UnitConverter.feet_to_meters(12, 1)
+      feet.should eq 3.7
+    end
+  end
 end

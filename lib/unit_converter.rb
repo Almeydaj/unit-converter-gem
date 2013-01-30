@@ -9,6 +9,12 @@ module UnitConverter
     round_to_precision(exact, precision)
   end
 
+  def self.feet_to_meters(feet, precision=2)
+    exact = feet * 0.305
+    round_to_precision(exact, precision)
+  end
+
+
   private
   def self.round_to_precision(num, precision)
     (num * 10**precision).round.to_f / 10**precision
