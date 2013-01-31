@@ -10,10 +10,19 @@ module UnitConverter
   end
 
   def self.feet_to_meters(feet, precision=2)
-    exact = feet * 0.305
+    exact = feet * 0.3048
     round_to_precision(exact, precision)
   end
 
+  def self.meters_to_feet(meters, precision=2)
+    exact = meters * 3.28084
+    round_to_precision(exact, precision)
+  end
+
+  def self.liters_to_gallons(liters, precision=2)
+    exact = liters * 0.264172
+    round_to_precision(exact, precision)
+  end
 
   private
   def self.round_to_precision(num, precision)
