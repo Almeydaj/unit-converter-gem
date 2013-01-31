@@ -24,6 +24,11 @@ module UnitConverter
     round_to_precision(exact, precision)
   end
 
+  def self.gallons_to_liters(gallons, precision=2)
+    exact = gallons * 3.78541
+    round_to_precision(exact, precision)
+  end
+  
   private
   def self.round_to_precision(num, precision)
     (num * 10**precision).round.to_f / 10**precision
