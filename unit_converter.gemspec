@@ -6,6 +6,10 @@ Gem::Specification.new do |s|
   s.description = "Converts units in an easy way."
   s.authors     = ["Jorge Almeyda", "Lee Quarella"]
   s.email       = 'lee@lucidfrog.com'
-  s.files       = ["lib/unit_converter.rb"]
-  s.homepage    = 'https://github.com/leequarella/unit-converter'
+  s.files       = ["lib/unit_converter.rb",
+                   "lib/helpers/math.rb",
+                   "lib/unit_converter/distances.rb",
+                   "lib/unit_converter/volumes.rb",
+                   "lib/unit_converter/weights.rb"]
+  s.homepage    = 'https://github.com/leequarella/unit-converter-gem'
 end
