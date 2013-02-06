@@ -1,6 +1,9 @@
 require "unit_converter"
+require "roundable_spec"
 
 describe UnitConverter::Weights do
+  it_behaves_like "roundable"
+
   context "pounds to kg" do
     it "without explicit precision, defaults to 2 decimals" do
       kilograms = UnitConverter::Weights.pounds_to_kilograms(10)
@@ -33,4 +36,20 @@ describe UnitConverter::Weights do
     end
   end
 
+  context "pounds to ounces" do
+    it "without explicit precision, defaults to 2 decimals" do
+      ounces = UnitConverter::Weights.pounds_to_ounces(10)
+      ounces.should eq 160
+      ounces = UnitConverter::Weights.pounds_to_ounces(12)
+      ounces.should eq 192
+    end
+
+    it "converts with explicit precision" do
+      ounces = UnitConverter::Weights.pounds_to_ounces(10, 3)
+      ounces.should eq 160
+      ounces = UnitConverter::Weights.pounds_to_ounces(12, 3)
+      ounces.should eq 192
+    end
+  end
+  
 end
