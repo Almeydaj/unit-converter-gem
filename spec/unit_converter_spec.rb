@@ -1,7 +1,6 @@
 require "unit_converter"
 
 describe UnitConverter do
-
   context "weights" do
     it "converts pounds to kilograms" do
       a = UnitConverter.convert(10, :pounds, :kilograms)

@@ -1,5 +1,4 @@
 CONVERSIONS = {
-
   pounds: {
     kilograms: lambda { |x| x * 0.453592 },
     grams: lambda { |x| x * 453.597024404 },
@@ -54,5 +53,4 @@ CONVERSIONS = {
   gallons: {
     liters: lambda { |x| x * 3.78541 }
   }
-  
 }

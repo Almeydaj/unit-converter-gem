@@ -16,5 +16,4 @@ module UnitConverter
       function = CONVERSIONS[from_unit][to_unit]
     end
   end
-  
 end
