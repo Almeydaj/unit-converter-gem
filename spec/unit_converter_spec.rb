@@ -101,9 +101,99 @@ describe UnitConverter do
       a.should eq 13.74
     end
 
-    it "converts fahrenheit to kelvin" do
+    it "converts feet to miles" do
+      a = UnitConverter.convert(15000, :feet, :miles)
+      a.should eq 2.84
+    end
+
+    it "converts feet to kilometers" do
+      a = UnitConverter.convert(15000, :feet, :kilometers)
+      a.should eq 4.57
+    end
+
+    it "converts feet to yards" do
+      a = UnitConverter.convert(15000, :feet, :yards)
+      a.should eq 5000
+    end
+
+    it "converts meters to feet" do
       a = UnitConverter.convert(13.74, :meters, :feet)
       a.should eq 45.08
+    end
+
+    it "converts meters to miles" do
+      a = UnitConverter.convert(2560, :meters, :miles)
+      a.should eq 1.59
+    end
+
+    it "converts meters to kilometers" do
+      a = UnitConverter.convert(2560, :meters, :kilometers)
+      a.should eq 2.56
+    end
+
+    it "converts meters to yards" do
+      a = UnitConverter.convert(2560, :meters, :yards)
+      a.should eq 2799.64
+    end
+
+    it "converts miles to feet" do
+      a = UnitConverter.convert(3.50, :miles, :feet)
+      a.should eq 18480
+    end
+
+    it "converts miles to meters" do
+      a = UnitConverter.convert(3.50, :miles, :meters)
+      a.should eq 5632.69
+    end
+
+    it "converts miles to kilometers" do
+      a = UnitConverter.convert(3.50, :miles, :kilometers)
+      a.should eq 5.63
+    end
+
+    it "converts miles to yards" do
+      a = UnitConverter.convert(3.50, :miles, :yards)
+      a.should eq 6160
+    end
+
+    it "converts kilometers to feet" do
+      a = UnitConverter.convert(3.50, :kilometers, :feet)
+      a.should eq 11482.94
+    end
+
+    it "converts kilometers to meters" do
+      a = UnitConverter.convert(3.50, :kilometers, :meters)
+      a.should eq 3500
+    end
+
+    it "converts kilometers to miles" do
+      a = UnitConverter.convert(3.50, :kilometers, :miles)
+      a.should eq 2.17
+    end
+
+    it "converts kilometers to yards" do
+      a = UnitConverter.convert(3.50, :kilometers, :yards)
+      a.should eq 3827.64
+    end
+
+    it "converts yards to feet" do
+      a = UnitConverter.convert(350.75, :yards, :feet)
+      a.should eq 1052.25
+    end
+
+    it "converts yards to meters" do
+      a = UnitConverter.convert(350.75, :yards, :meters)
+      a.should eq 320.73
+    end
+
+    it "converts yards to miles" do
+      a = UnitConverter.convert(360.75, :yards, :miles)
+      a.should eq 0.20
+    end
+
+    it "converts yards to yards" do
+      a = UnitConverter.convert(360.75, :yards, :kilometers)
+      a.should eq 0.33
     end
   end
 
@@ -113,9 +203,29 @@ describe UnitConverter do
       a.should eq 11.91
     end
 
+    it "converts liters to quarts" do
+      a = UnitConverter.convert(45.08, :liters, :quarts)
+      a.should eq 47.64
+    end
+
+    it "converts gallons to quarts" do
+      a = UnitConverter.convert(45.08, :gallons, :quarts)
+      a.should eq 180.32
+    end
+
     it "converts gallons to liters" do
-      a = UnitConverter.convert(11.91, :gallons, :liters)
-      a.should eq 45.08
+      a = UnitConverter.convert(45.08, :gallons, :liters)
+      a.should eq 170.65
+    end
+
+    it "converts quarts to liters" do
+      a = UnitConverter.convert(45.08, :quarts, :liters)
+      a.should eq 42.66
+    end
+
+    it "converts liters to gallons" do
+      a = UnitConverter.convert(45.08, :liters, :gallons)
+      a.should eq 11.91
     end
   end
 
